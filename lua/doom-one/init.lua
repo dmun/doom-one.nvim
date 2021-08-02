@@ -257,7 +257,7 @@ local general_ui = {
 
 	WildMenu = { fg = fg, bg = dark_blue },
 	Separator = { fg = fg_alt },
-	VertSplit = { fg = grey, bg = bg },
+	VertSplit = { fg = bg_alt, bg = bg },
 
 	TabLine = {
 		fg = base7,
@@ -267,8 +267,8 @@ local general_ui = {
 	TabLineSel = { fg = blue, bg = bg, gui = 'bold' },
 	TabLineFill = { bg = base1, gui = 'bold' },
 
-	StatusLine = { fg = base8, bg = base3 },
-	StatusLineNC = { fg = base6, bg = bg_popup },
+	StatusLine = { fg = base8, bg = bg_alt },
+	StatusLineNC = { fg = base6, bg = bg_alt },
 	StatusLinePart = { fg = base6, bg = bg_popup, gui = 'bold' },
 	StatusLinePartNC = { fg = base6, bg = bg_popup, gui = 'bold' },
 
@@ -505,6 +505,8 @@ local barbar = {
 	BufferTabpageFill = { fg = base4, bg = base1, gui = 'bold' },
 
 	BufferPart = { fg = diff_info_fg, bg = diff_info_bg0, gui = 'bold' },
+
+	BufferOffset = { bg = bg_alt },
 }
 
 apply_highlight(barbar)
@@ -674,6 +676,8 @@ local nvim_tree = {
 	NvimTreeOpenedFile = { fg = fg_alt },
 	NvimTreeSpecialFile = { fg = fg, gui = 'underline' },
 	NvimTreeMarkdownFile = { fg = fg, gui = 'underline' },
+	NvimTreeVertSplit = { fg = base4, bg = bg_alt },
+	NvimTreeIndentMarker = { fg = blue, bg = bg_alt },
 }
 
 apply_highlight(nvim_tree)
