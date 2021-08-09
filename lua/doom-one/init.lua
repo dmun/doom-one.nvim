@@ -265,7 +265,7 @@ local general_ui = {
 		gui = 'bold',
 	},
 	TabLineSel = { fg = blue, bg = bg, gui = 'bold' },
-	TabLineFill = { bg = base1, gui = 'bold' },
+	TabLineFill = { bg = bg_alt, gui = 'bold' },
 
 	StatusLine = { fg = base8, bg = bg_alt },
 	StatusLineNC = { fg = base6, bg = bg_alt },
@@ -495,14 +495,14 @@ local barbar = {
 	BufferVisibleSign = { fg = base4, bg = bg },
 	BufferVisibleTarget = { fg = red, bg = bg, gui = 'bold' },
 
-	BufferInactive = { fg = base6, bg = base1 },
-	BufferInactiveIndex = { fg = base6, bg = base1 },
-	BufferInactiveMod = { fg = yellow, bg = base1 },
-	BufferInactiveSign = { fg = base4, bg = base1 },
-	BufferInactiveTarget = { fg = red, bg = base1, gui = 'bold' },
+	BufferInactive = { fg = base6, bg = bg_alt },
+	BufferInactiveIndex = { fg = base6, bg = bg_alt },
+	BufferInactiveMod = { fg = yellow, bg = bg_alt },
+	BufferInactiveSign = { fg = base1, bg = bg_alt },
+	BufferInactiveTarget = { fg = red, bg = bg_alt, gui = 'bold' },
 
 	BufferTabpages = { fg = blue, bg = bg_statusline, gui = 'bold' },
-	BufferTabpageFill = { fg = base4, bg = base1, gui = 'bold' },
+	BufferTabpageFill = { fg = base1, bg = bg_alt, gui = 'bold' },
 
 	BufferPart = { fg = diff_info_fg, bg = diff_info_bg0, gui = 'bold' },
 
@@ -676,7 +676,7 @@ local nvim_tree = {
 	NvimTreeOpenedFile = { fg = fg_alt },
 	NvimTreeSpecialFile = { fg = fg, gui = 'underline' },
 	NvimTreeMarkdownFile = { fg = fg, gui = 'underline' },
-	NvimTreeVertSplit = { fg = base4, bg = bg_alt },
+	NvimTreeVertSplit = { fg = base1, bg = bg_alt },
 	NvimTreeIndentMarker = { fg = blue, bg = bg_alt },
 }
 
