@@ -96,7 +96,7 @@ local white = '#efefef'
 
 local bg = '#282c34'
 local bg_alt = '#21242b'
-local bg_highlight = '#21252a'
+local bg_highlight = '#2c323c'
 local bg_popup = '#3E4556'
 local bg_statusline = bg_popup
 local bg_highlighted = '#4A4A45'
@@ -238,7 +238,7 @@ local general_ui = {
 	LineNr = { fg = grey, bg = transparent_bg and 'NONE' or bg },
 	Cursor = { bg = blue },
 	CursorLine = { bg = bg_highlight },
-	CursorLineNr = { fg = fg, bg = bg_highlight },
+	CursorLineNr = { fg = fg, bg = bg },
 	CursorColumn = { bg = bg_highlight },
 
 	Folded = { fg = base5, bg = bg_highlight },
@@ -667,7 +667,9 @@ apply_highlight(neogit)
 -- NvimTree {{{
 
 local nvim_tree = {
-	NvimTreeFolderName = { fg = light_bg and base9 or blue, gui = 'bold' },
+	NvimTreeNormal = { bg = bg_alt },
+	NvimTreeEndOfBuffer = { fg = bg_alt, bg = bg_alt },
+	NvimTreeFolderName = { fg = light_bg and base9 or blue },
 	NvimTreeRootFolder = { fg = green },
 	NvimTreeEmptyFolderName = { fg = fg_alt, gui = 'bold' },
 	NvimTreeSymlink = { fg = fg, gui = 'underline' },
