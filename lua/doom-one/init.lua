@@ -96,7 +96,7 @@ local white = '#efefef'
 
 local bg = '#282c34'
 local bg_alt = '#21242b'
-local bg_highlight = '#2c323c'
+local bg_highlight = '#21252a'
 local bg_popup = '#3E4556'
 local bg_statusline = bg_popup
 local bg_highlighted = '#4A4A45'
@@ -237,7 +237,7 @@ local general_ui = {
 
 	LineNr = { fg = grey, bg = transparent_bg and 'NONE' or bg },
 	Cursor = { bg = blue },
-	CursorLine = { bg = bg_highlight },
+	CursorLine = { bg = '#2c323c' },
 	CursorLineNr = { fg = fg, bg = bg },
 	CursorColumn = { bg = bg_highlight },
 
@@ -257,7 +257,7 @@ local general_ui = {
 
 	WildMenu = { fg = fg, bg = dark_blue },
 	Separator = { fg = fg_alt },
-	VertSplit = { fg = bg_alt, bg = bg },
+	VertSplit = { fg = base1, bg = bg },
 
 	TabLine = {
 		fg = base7,
@@ -273,7 +273,7 @@ local general_ui = {
 	StatusLinePartNC = { fg = base6, bg = bg_popup, gui = 'bold' },
 
 	Pmenu = { fg = fg, bg = bg_highlight },
-	PmenuSel = { fg = base0, bg = blue },
+	PmenuSel = { fg = white, bg = bg_popup },
 	PmenuSelBold = { fg = base0, bg = blue, gui = 'bold' },
 	PmenuSbar = { bg = bg_alt },
 	PmenuThumb = { bg = fg },
