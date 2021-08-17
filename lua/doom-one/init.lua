@@ -98,7 +98,7 @@ local bg = '#282c34'
 local bg_alt = '#21242b'
 local bg_highlight = '#21252a'
 local bg_popup = '#3E4556'
-local bg_statusline = bg_popup
+local bg_statusline = '1D2026'
 local bg_highlighted = '#4A4A45'
 
 local fg = '#bbc2cf'
@@ -166,7 +166,7 @@ if current_bg == 'light' then
 	bg_alt = '#f0f0f0'
 	bg_highlight = utils.Darken(bg, 0.3)
 	bg_popup = bg_alt
-	bg_statusline = bg_popup
+	bg_statusline = 'e5e5e5'
 
 	fg = base5
 	fg_alt = base3
@@ -267,7 +267,7 @@ local general_ui = {
 	TabLineSel = { fg = blue, bg = bg, gui = 'bold' },
 	TabLineFill = { bg = bg_alt, gui = 'bold' },
 
-	StatusLine = { fg = base8, bg = bg_alt },
+	StatusLine = { fg = base8, bg = bg_statusline },
 	StatusLineNC = { fg = base6, bg = bg_alt },
 	StatusLinePart = { fg = base6, bg = bg_popup, gui = 'bold' },
 	StatusLinePartNC = { fg = base6, bg = bg_popup, gui = 'bold' },
@@ -483,7 +483,7 @@ apply_highlight(markdown)
 -- barbar.nvim {{{
 
 local barbar = {
-	BufferCurrent = { fg = base9, bg = bg },
+	BufferCurrent = { fg = fg, bg = bg },
 	BufferCurrentIndex = { fg = base6, bg = bg },
 	BufferCurrentMod = { fg = yellow, bg = bg },
 	BufferCurrentSign = { fg = blue, bg = bg },
@@ -495,13 +495,13 @@ local barbar = {
 	BufferVisibleSign = { fg = base4, bg = bg },
 	BufferVisibleTarget = { fg = red, bg = bg, gui = 'bold' },
 
-	BufferInactive = { fg = base6, bg = bg_alt },
+	BufferInactive = { fg = base5, bg = bg_alt },
 	BufferInactiveIndex = { fg = base6, bg = bg_alt },
 	BufferInactiveMod = { fg = yellow, bg = bg_alt },
 	BufferInactiveSign = { fg = base1, bg = bg_alt },
 	BufferInactiveTarget = { fg = red, bg = bg_alt, gui = 'bold' },
 
-	BufferTabpages = { fg = blue, bg = bg_statusline, gui = 'bold' },
+	BufferTabpages = { fg = blue, bg = bg_popup, gui = 'bold' },
 	BufferTabpageFill = { fg = base1, bg = bg_alt, gui = 'bold' },
 
 	BufferPart = { fg = diff_info_fg, bg = diff_info_bg0, gui = 'bold' },
@@ -680,6 +680,7 @@ local nvim_tree = {
 	NvimTreeMarkdownFile = { fg = fg, gui = 'underline' },
 	NvimTreeVertSplit = { fg = base1, bg = bg_alt },
 	NvimTreeIndentMarker = { fg = blue, bg = bg_alt },
+	NvimTreeStatusline = { bg = bg_alt },
 }
 
 apply_highlight(nvim_tree)
