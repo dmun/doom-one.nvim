@@ -98,7 +98,7 @@ local bg = '#282c34'
 local bg_alt = '#21242b'
 local bg_highlight = '#21252a'
 local bg_popup = '#3E4556'
-local bg_statusline = '1D2026'
+local bg_statusline = '#1D2026'
 local bg_highlighted = '#4A4A45'
 
 local fg = '#bbc2cf'
