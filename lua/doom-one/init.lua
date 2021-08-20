@@ -212,7 +212,8 @@ end
 -- General UI {{{
 
 local general_ui = {
-	Normal = { fg = fg, bg = transparent_bg and 'NONE' or bg },
+	Normal = { fg = fg, bg = transparent_bg and 'NONE' or bg_alt },
+	NormalBuffer = { fg = fg, bg = transparent_bg and 'NONE' or bg },
 	NormalPopup = {
 		fg = fg_highlight,
 		bg = transparent_bg and 'NONE' or bg_popup,
