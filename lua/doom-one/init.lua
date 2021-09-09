@@ -238,7 +238,7 @@ local general_ui = {
 
 	LineNr = { fg = grey, bg = transparent_bg and 'NONE' or bg },
 	Cursor = { bg = blue },
-	CursorLine = { bg = '#2c323c' },
+	CursorLine = { bg = bg_alt },
 	CursorLineNr = { fg = fg, bg = bg },
 	CursorColumn = { bg = bg_highlight },
 
