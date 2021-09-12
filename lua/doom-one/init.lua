@@ -231,7 +231,7 @@ local general_ui = {
 		fg = base6,
 		bg = transparent_bg and 'NONE' or bg_popup,
 	},
-	EndOfBuffer = { fg = bg, bg = transparent_bg and 'NONE' or bg },
+	EndOfBuffer = { fg = grey, bg = transparent_bg and 'NONE' or bg },
 
 	Visual = { bg = dark_blue },
 	VisualBold = { bg = dark_blue, gui = 'bold' },
@@ -239,7 +239,7 @@ local general_ui = {
 	LineNr = { fg = grey, bg = transparent_bg and 'NONE' or bg },
 	Cursor = { bg = blue },
 	CursorLine = { bg = bg_alt },
-	CursorLineNr = { fg = fg, bg = bg },
+	CursorLineNr = { fg = fg, bg = bg_alt },
 	CursorColumn = { bg = bg_highlight },
 
 	Folded = { fg = base5, bg = bg_highlight },
@@ -274,7 +274,7 @@ local general_ui = {
 	StatusLinePartNC = { fg = base6, bg = bg_popup, gui = 'bold' },
 
 	Pmenu = { fg = fg, bg = bg_highlight },
-	PmenuSel = { fg = white, bg = bg_popup },
+	PmenuSel = { fg = bg_alt, bg = blue },
 	PmenuSelBold = { fg = base0, bg = blue, gui = 'bold' },
 	PmenuSbar = { bg = bg_alt },
 	PmenuThumb = { bg = fg },
@@ -628,13 +628,13 @@ if vim.g.doom_one_telescope_highlights then
 		TelescopeSelection = { fg = yellow, gui = 'bold' },
 		TelescopeSelectionCaret = { fg = light_bg and orange or blue },
 		TelescopeMultiSelection = { fg = grey },
-		TelescopeNormal = { fg = fg },
+		TelescopeNormal = { fg = fg, bg = bg },
 		TelescopeMatching = { fg = green, gui = 'bold' },
 		TelescopePromptPrefix = { fg = light_bg and orange or blue },
-		TelescopeBorder = { fg = light_bg and orange or blue },
-		TelescopePromptBorder = { fg = light_bg and orange or blue },
-		TelescopeResultsBorder = { fg = light_bg and orange or blue },
-		TelescopePreviewBorder = { fg = light_bg and orange or blue },
+		TelescopeBorder = { fg = light_bg and orange or blue, bg = bg },
+		TelescopePromptBorder = { fg = light_bg and orange or blue, bg = bg },
+		TelescopeResultsBorder = { fg = light_bg and orange or blue, bg = bg },
+		TelescopePreviewBorder = { fg = light_bg and orange or blue, bg = bg },
 	}
 
 	apply_highlight(telescope)
