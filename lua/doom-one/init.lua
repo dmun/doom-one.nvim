@@ -105,6 +105,7 @@ local fg = '#bbc2cf'
 local fg_alt = '#5B6268'
 local fg_highlight = utils.Lighten(fg, 0.2)
 
+local split_fg = '#191B20'
 local tag = utils.Mix(blue, cyan, 0.5)
 
 local diff_info_fg = orange
@@ -258,7 +259,7 @@ local general_ui = {
 
 	WildMenu = { fg = fg, bg = dark_blue },
 	Separator = { fg = fg_alt },
-	VertSplit = { fg = base1, bg = bg },
+	VertSplit = { fg = split_fg, bg = bg },
 
 	TabLine = {
 		fg = base7,
@@ -679,7 +680,7 @@ local nvim_tree = {
 	NvimTreeOpenedFile = { fg = fg_alt },
 	NvimTreeSpecialFile = { fg = fg, gui = 'underline' },
 	NvimTreeMarkdownFile = { fg = fg, gui = 'underline' },
-	NvimTreeVertSplit = { fg = base1, bg = bg_alt },
+	NvimTreeVertSplit = { fg = split_fg, bg = bg_alt },
 	NvimTreeIndentMarker = { fg = blue, bg = bg_alt },
 	NvimTreeStatusline = { bg = bg_alt },
 }
