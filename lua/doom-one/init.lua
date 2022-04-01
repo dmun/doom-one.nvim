@@ -275,8 +275,7 @@ local general_ui = {
 	StatusLinePartNC = { fg = base6, bg = bg_popup, gui = 'bold' },
 
 	Pmenu = { fg = fg, bg = bg_highlight },
-	PmenuSel = { fg = bg_alt, bg = blue },
-	PmenuSelBold = { fg = base0, bg = blue, gui = 'bold' },
+	PmenuSel = { fg = fg, bg = dark_blue, gui = 'bold' },
 	PmenuSbar = { bg = bg_alt },
 	PmenuThumb = { bg = fg },
 }
