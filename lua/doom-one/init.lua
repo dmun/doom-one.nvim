@@ -275,7 +275,7 @@ local general_ui = {
 	StatusLinePartNC = { fg = base6, bg = bg_popup, gui = 'bold' },
 
 	Pmenu = { fg = fg, bg = bg_highlight },
-	PmenuSel = { fg = fg, bg = dark_blue, gui = 'bold' },
+	PmenuSel = { bg = dark_blue, gui = 'bold' },
 	PmenuSbar = { bg = bg_alt },
 	PmenuThumb = { bg = fg },
 }
@@ -597,6 +597,15 @@ end
 
 -- }}}
 
+-- nvim-cmp {{{
+
+local cmp = {
+    CmpItemAbbrMatch = { fg = blue }
+}
+
+apply_highlight(cmp)
+
+-- }}}
 
 -- Gitgutter {{{
 
