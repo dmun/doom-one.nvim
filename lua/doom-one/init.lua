@@ -734,6 +734,16 @@ apply_highlight(startify)
 
 -- }}}
 
+-- {{{
+
+local scrollview = {
+    Scrollview = { bg = fg_alt },
+}
+
+apply_highlight(scrollview)
+
+-- }}}
+
 -- WhichKey {{{
 
 local whichkey = {
