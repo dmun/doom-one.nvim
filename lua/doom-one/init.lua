@@ -675,6 +675,21 @@ apply_highlight(neogit)
 
 -- }}}
 
+-- NeoTree {{{
+
+local neo_tree = {
+    NeoTreeNormal = { bg = bg_alt },
+    NeoTreeNormalNC = { bg = bg_alt },
+    NeoTreeEndOfBuffer = { fg = bg_alt, bg = bg_alt },
+    NeoTreeStatusLine = { bg = bg_alt },
+    -- NeoTreeStatusLineNC = { bg = bg_alt },
+    NeoTreeWinSeparator = { fg = split_fg, bg = bg_alt },
+}
+
+apply_highlight(neo_tree)
+
+-- }}}
+
 -- NvimTree {{{
 
 local nvim_tree = {
