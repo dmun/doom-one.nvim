@@ -241,6 +241,7 @@ local general_ui = {
 	Cursor = { bg = blue },
 	CursorLine = { bg = bg_alt },
 	CursorLineNr = { fg = fg, bg = bg_alt },
+	CursorLineSign = { bg = bg_alt },
 	CursorColumn = { bg = bg_highlight },
 
 	Folded = { fg = base5, bg = bg_highlight },
