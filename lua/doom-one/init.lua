@@ -681,6 +681,7 @@ apply_highlight(neogit)
 local neo_tree = {
     NeoTreeNormal = { bg = bg_alt },
     NeoTreeNormalNC = { bg = bg_alt },
+    NeoTreeCursorLine = { bg = bg },
     NeoTreeEndOfBuffer = { fg = bg_alt, bg = bg_alt },
     NeoTreeStatusLine = { bg = bg_alt },
     -- NeoTreeStatusLineNC = { bg = bg_alt },
