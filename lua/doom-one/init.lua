@@ -96,7 +96,7 @@ local white = '#efefef'
 
 local bg = '#282c34'
 local bg_alt = '#21242b'
-local bg_highlight = '#21252a'
+local bg_highlight = utils.Lighten(bg, 0.4)
 local bg_popup = '#3E4556'
 local bg_statusline = '#1D2026'
 local bg_highlighted = '#4A4A45'
@@ -242,10 +242,11 @@ local general_ui = {
 	CursorLine = { bg = bg_alt },
 	CursorLineNr = { fg = fg, bg = bg_alt },
 	CursorLineSign = { bg = bg_alt },
-	CursorColumn = { bg = bg_highlight },
+	CursorColumn = { bg = bg_alt },
 
-	Folded = { fg = base5, bg = bg_highlight },
-	FoldColumn = { fg = fg_alt, bg = bg },
+	Folded = { bg = bg },
+	-- Folded = { fg = base5, bg = bg_highlight },
+	-- FoldColumn = { fg = fg_alt, bg = bg },
 	SignColumn = { bg = transparent_bg and 'NONE' or bg },
 	ColorColumn = { bg = bg_highlight },
 
@@ -275,7 +276,7 @@ local general_ui = {
 	StatusLinePart = { fg = base6, bg = bg_popup, gui = 'bold' },
 	StatusLinePartNC = { fg = base6, bg = bg_popup, gui = 'bold' },
 
-	Pmenu = { fg = fg, bg = bg_highlight },
+	Pmenu = { fg = fg, bg = bg_alt },
 	PmenuSel = { bg = dark_blue, gui = 'bold' },
 	PmenuSbar = { bg = bg_alt },
 	PmenuThumb = { bg = fg },
@@ -470,8 +471,8 @@ apply_highlight(diff)
 
 -- Markdown {{{
 local markdown = {
-	markdownCode = { bg = bg_highlight },
-	markdownCodeBlock = { bg = bg_highlight },
+	markdownCode = { bg = bg_alt },
+	markdownCodeBlock = { bg = bg_alt },
 	markdownH1 = { gui = 'bold' },
 	markdownH2 = { gui = 'bold' },
 	markdownLinkText = { gui = 'underline' },
@@ -665,7 +666,7 @@ local neogit = {
 	NeogitHunkHeader = { fg = bg, bg = ng_header_bg },
 	NeogitHunkHeaderHighlight = { fg = bg_alt, bg = ng_header_bg_hl, gui = 'bold' },
 	NeogitStagedChanges = { fg = blue, gui = 'bold' },
-	NeogitStagedChangesRegion = { bg = bg_highlight },
+	NeogitStagedChangesRegion = { bg = bg_alt },
 	NeogitStashes = { fg = blue, gui = 'bold' },
 	NeogitUnstagedChanges = { fg = blue, gui = 'bold' },
 	NeogitUntrackedfiles = { fg = blue, gui = 'bold' },
@@ -684,6 +685,7 @@ local neo_tree = {
     NeoTreeStatusLine = { bg = bg_alt },
     -- NeoTreeStatusLineNC = { bg = bg_alt },
     NeoTreeWinSeparator = { fg = split_fg, bg = bg_alt },
+    NeoTreeFloatBorder = { fg = split_fg },
 }
 
 apply_highlight(neo_tree)
@@ -747,6 +749,17 @@ local startify = {
 }
 
 apply_highlight(startify)
+
+-- }}}
+
+-- {{{ Ufo
+
+local ufo = {
+    UfoFoldedEllipsis = { fg = base7, bg = bg_highlight },
+    UfoFoldedBg = { bg = bg_highlight },
+}
+
+apply_highlight(ufo)
 
 -- }}}
 
