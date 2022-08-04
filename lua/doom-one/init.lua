@@ -636,16 +636,17 @@ high_link('GitSignsChangeDelete', 'DiffModifiedGutter')
 
 if vim.g.doom_one_telescope_highlights then
 	local telescope = {
-		TelescopeSelection = { fg = yellow, gui = 'bold' },
+		TelescopeSelection = { fg = white, bg = base4, gui = 'bold' },
 		TelescopeSelectionCaret = { fg = light_bg and orange or blue },
 		TelescopeMultiSelection = { fg = grey },
-		TelescopeNormal = { fg = fg, bg = bg },
+		TelescopeNormal = { fg = fg, bg = bg_alt },
 		TelescopeMatching = { fg = green, gui = 'bold' },
 		TelescopePromptPrefix = { fg = light_bg and orange or blue },
-		TelescopeBorder = { fg = light_bg and orange or blue, bg = bg },
-		TelescopePromptBorder = { fg = light_bg and orange or blue, bg = bg },
-		TelescopeResultsBorder = { fg = light_bg and orange or blue, bg = bg },
-		TelescopePreviewBorder = { fg = light_bg and orange or blue, bg = bg },
+		TelescopePromptTitle = { fg = blue, bg = bg_alt },
+		TelescopeBorder = { fg = light_bg and orange or bg_alt, bg = bg_alt },
+		TelescopePromptBorder = { fg = bg_alt, bg = bg_alt },
+		TelescopeResultsBorder = { fg = bg_alt, bg = bg_alt },
+		TelescopePreviewBorder = { fg = bg_alt, bg = bg_alt },
 	}
 
 	apply_highlight(telescope)
@@ -756,7 +757,7 @@ apply_highlight(startify)
 -- {{{ Ufo
 
 local ufo = {
-    UfoFoldedEllipsis = { fg = base7, bg = bg_highlight },
+    UfoFoldedEllipsis = { fg = base6, bg = bg_highlight },
     UfoFoldedBg = { bg = bg_highlight },
 }
 
